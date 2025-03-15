@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>🛒 Thanh toán đơn hàng</h2>
+
+        <div class="user-info">
+            <h3>📌 Thông tin giao hàng</h3>
+            <form id="checkout-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Họ và Tên" required>
+                </div>
+        
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Số điện thoại" required>
+                </div>
+        
+                <div class="input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="address" placeholder="Địa chỉ giao hàng" required>
+                </div>
+        
+                <div class="input-group">
+                    <i class="fas fa-sticky-note"></i>
+                    <textarea id="notes" placeholder="Ghi chú (Không bắt buộc)" rows="3"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Bảng giỏ hàng -->
+        <div class="cart-section">
+            <h3>🛍 Đơn hàng của bạn</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody id="checkout-items">
+                    <tr><td colspan="6" class="loading">⏳ Đang tải...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tổng tiền & Nút thanh toán -->
+        <div class="checkout-summary">
+            <h3>💰 Tổng tiền: <span id="checkout-total-price">0₫</span></h3>
+            <button class="btn" onclick="completePayment()">💳 Hoàn tất thanh toán</button>
+            <a href="cart.html" class="btn back">← Quay lại giỏ hàng</a>
+        </div>
+    </div>
+
+    <script src="Js/checkout.js"></script>
+</body>
+</html>

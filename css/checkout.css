@@ -1,0 +1,236 @@
+/* 🌈 Màu sắc chính */
+:root {
+    --primary-color: #6A5ACD; /* Tím pastel */
+    --secondary-color: #FF6B81; /* Hồng nhạt */
+    --accent-color: #00C9A7; /* Xanh cyan */
+    --background-color: #F8F9FA;
+    --text-color: #333;
+    --border-radius: 10px;
+}
+
+/* 📌 Định dạng chung */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* 🏡 Container chính */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+/* 🔥 Tiêu đề */
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--text-color);
+    text-align: left;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* 📝 Form nhập thông tin */
+.user-info {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* 📥 Nhóm input */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 12px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+.input-group i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* 🎯 Hiệu ứng khi focus */
+.input-group:focus-within {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(255, 107, 129, 0.4);
+}
+
+/* 🛍 Bảng sản phẩm */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    min-width: 400px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.checkout-summary {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* ✨ Nút bấm */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #5A4ACD;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.4);
+}
+
+/* 🔄 Nút quay lại */
+.btn.back {
+    background: var(--accent-color);
+}
+
+.btn.back:hover {
+    background: #00B39D;
+}
+
+/* ⏳ Loading */
+.loading {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .icons {
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 99%;
+        padding: 10px;
+    }
+
+    table {
+        width: 80%;
+        display: block;
+        min-width: 95%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        font-size: 18px;
+        white-space: normal; 
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+    }
+
+    tr {
+        background: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkout-panel {
+        width: 100%;
+        max-width: none;
+        margin-top: 20px;
+    }
+
+}
